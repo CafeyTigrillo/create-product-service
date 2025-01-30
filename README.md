@@ -1,36 +1,36 @@
 # 🛒 Create Product Service
 
-> Un potente microservicio REST desarrollado con Spring Boot para gestionar productos de manera eficiente.
+> A powerful REST microservice built with Spring Boot to efficiently manage products.
 
-## 🚀 Descripción
-Create Product Service es un microservicio moderno y escalable diseñado para manejar la información de productos mediante un conjunto de endpoints RESTful. Utiliza Spring Boot y JPA para ofrecer una solución robusta y flexible para la gestión de productos.
+## 🚀 Description
+Create Product Service is a modern and scalable microservice designed to handle product information through a set of RESTful endpoints. It uses Spring Boot and JPA to provide a robust and flexible solution for product management.
 
-## 💻 Tecnologías Utilizadas
+## 💻 Tech Stack
 - Spring Boot
 - Java
 - JPA (Java Persistence API)
 
-## 🌟 Características Principales
-- Creación de productos con información detallada.
-- Persistencia de datos con JPA.
-- API REST estructurada para una fácil integración.
-- Arquitectura modular con separación de responsabilidades.
+## 🌟 Key Features
+- Product creation with detailed information.
+- Data persistence using JPA.
+- Structured REST API for easy integration.
+- Modular architecture with clear separation of concerns.
 
 ## 📌 API Endpoints
 
-- **POST** `/products/create` - Crear un nuevo producto.
+- **POST** `/products/create` - Create a new product.
 
-## 🛠 Modelo de Datos
+## 🛠 Data Model
 
-Un producto contiene la siguiente información:
-- `id_product`: Identificador único del producto.
-- `name`: Nombre del producto.
-- `description`: Descripción del producto.
-- `price`: Precio del producto.
-- `id_category`: Identificador de la categoría a la que pertenece.
-- `availability`: Indica si el producto está disponible o no.
+A product contains the following information:
+- `id_product`: Unique identifier for the product.
+- `name`: Product name.
+- `description`: Product description.
+- `price`: Product price.
+- `id_category`: Identifier of the category it belongs to.
+- `availability`: Indicates whether the product is available or not.
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 ```
 com.mipagina.create_product_service/
 ├── 📄 CreateProductServiceApplication.java
@@ -44,18 +44,18 @@ com.mipagina.create_product_service/
     └── IProductService.java
 ```
 
-## 🚀 Instalación y Uso
-1. Clona el repositorio y navega al directorio del proyecto.
-2. Asegúrate de tener Java y Maven instalados.
-3. Ejecuta el servicio con:
+## 🚀 Installation and Usage
+1. Clone the repository and navigate to the project directory.
+2. Ensure you have Java and Maven installed.
+3. Run the service with:
    ```sh
    mvn spring-boot:run
    ```
-4. Accede a los endpoints desde Postman o cualquier cliente API.
+4. Access the endpoints using Postman or any API client.
 
-## 📌 Contribución
-Si deseas contribuir, abre un issue o un pull request con tus mejoras. ¡Toda ayuda es bienvenida!
+## 📌 Contribution
+If you wish to contribute, open an issue or a pull request with your improvements. Any help is welcome!
 
 ---
-**Create Product Service** - Microservicio desarrollado con ❤️ y Spring Boot 🚀
+**Create Product Service** - Microservice developed with ❤️ and Spring Boot 🚀
 
