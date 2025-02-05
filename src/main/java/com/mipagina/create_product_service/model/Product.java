@@ -5,31 +5,43 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Min;
+
 import lombok.Data;
 
 @Entity
-@Schema(description = "Product entity representing a menu item in the restaurant system")
+@Schema(description = "Product entity representing a product in the restaurant menu")
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Unique identifier of the menu item", example = "1")
+    @Schema(description = "Unique identifier of the product", example = "1")
     private Long id_product;
 
-    @Schema(description = "Name of the menu item", example = "Grilled Chicken Sandwich")
+    @Schema(description = "Name of the product", example = "Margherita Pizza", required = true)
+    @NotNull(message = "The product name is required")
+    @Size(min = 3, max = 50, message = "The name must be between 3 and 50 characters")
     private String name;
 
-    @Schema(description = "Description of the menu item", example = "Grilled chicken with lettuce, tomato, and mayo on toasted bread")
+    @Schema(description = "Detailed description of the product", example = "Classic Italian pizza with mozzarella, tomato, and basil")
+    @NotNull(message = "Description is required")
+    @Size(min = 10, max = 200, message = "The description must be between 10 and 200 characters")
     private String description;
 
-    @Schema(description = "Price of the menu item", example = "12.99")
+    @Schema(description = "Price of the product", example = "12.99", required = true)
+    @NotNull(message = "Price is required")
+    @Min(value = 0, message = "The price must be greater than or equal to 0")
     private Double price;
 
-    @Schema(description = "Category ID to which the menu item belongs (e.g., main dish, appetizer)", example = "2")
+    @Schema(description = "Category ID to which the product belongs", example = "2", required = true)
+    @NotNull(message = "Category ID is required")
     private Long id_category;
 
-    @Schema(description = "Availability of the menu item (if available in the restaurant)", example = "true")
+    @Schema(description = "Product availability status", example = "true")
     private Boolean availability;
+    // Getters and Setters
 
     public Long getId_product() {
         return id_product;
